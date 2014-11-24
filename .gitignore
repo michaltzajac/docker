@@ -1,1 +1,6 @@
 *.swp
+*.jar
+*.war
+*.rpm
+*.tar.gz
+*.zip
