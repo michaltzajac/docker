@@ -2,7 +2,7 @@ FROM            mzajac/centos-java:8u25
 MAINTAINER      Michal Zajac <michal.t.zajac@gmail.com>
 ADD             wildfly-8.2.0.Final.tar.gz /opt/
 ADD             postgresql-9.3-1102.jdbc41.jar /tmp/
-EXPOSE          8080 9990
+EXPOSE          8080
 RUN             echo "admin=46f8d6885834b69e95eb6ad08470c2ef" >> /opt/wildfly-8.2.0.Final/standalone/configuration/mgmt-users.properties
 RUN             echo "admin=" >> /opt/wildfly-8.2.0.Final/standalone/configuration/mgmt-groups.properties
 RUN             mkdir -p /data/deployments
