@@ -1,7 +1,6 @@
 FROM            centos:centos7
 MAINTAINER      Michal Zajac <parmezan@gmail.com>
-ADD             pgdg-centos93-9.3-1.noarch.rpm /tmp/
-RUN             yum install -y /tmp/pgdg-centos93-9.3-1.noarch.rpm
+RUN             yum install -y http://yum.postgresql.org/9.3/redhat/rhel-7-x86_64/pgdg-centos93-9.3-1.noarch.rpm
 RUN             yum install -y postgresql93-server postgresql93-contrib
 RUN             localedef -c -i pl_PL -f UTF-8 pl_PL.UTF-8
 USER            postgres
