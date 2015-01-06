@@ -8,6 +8,6 @@ USER            postgres
 RUN             /usr/pgsql-9.3/bin/initdb -E UTF-8 -D /var/lib/pgsql/9.3/data
 RUN             echo "host  all     all     0.0.0.0/0           md5" >> /var/lib/pgsql/9.3/data/pg_hba.conf
 RUN             echo "listen_addresses = '*'" >> /var/lib/pgsql/9.3/data/postgresql.conf
-CMD             /usr/pgsql-9.3/bin/pg_ctl start -D /var/lib/pgsql/9.3/data/ && tail -f /var/log/pgsql
+CMD             rm -f /var/lib/pgsql/9.3/data/postmaster.pid; /usr/pgsql-9.3/bin/pg_ctl start -D /var/lib/pgsql/9.3/data/ && tail -f /var/log/pgsql
 EXPOSE          5432
 
