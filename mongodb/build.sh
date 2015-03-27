@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t "mzajac/mongodb:2.6" .
+docker build -t "mzajac/mongodb:3.0.1" .
