@@ -5,6 +5,8 @@ RUN             echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)
 RUN             apt-get update -y
 RUN             apt-get install -y mongodb-org=3.0.1 mongodb-org-server=3.0.1 mongodb-org-shell=3.0.1 mongodb-org-mongos=3.0.1 mongodb-org-tools=3.0.1
 RUN             sed -i '/bind_ip/d' /etc/mongod.conf
+RUN             sed -i 's:dbpath=/var/lib/mongodb:dbpath=/data/db:' /etc/mongod.conf
+RUN             echo "smallfiles=true" >> /etc/mongod.conf
 RUN             mkdir -p /data/db && chown mongodb:mongodb /data/db
 RUN             mkdir -p /etc/service/mongodb
 ADD             mongodb.sh /etc/service/mongodb/run
