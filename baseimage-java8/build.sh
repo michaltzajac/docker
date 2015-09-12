@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-docker build -t mzajac/java8:8u40 .
+docker build -t mzajac/java8:8u60 .
