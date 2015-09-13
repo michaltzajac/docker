@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t "mzajac/wildfly:8.2.0" . 
+docker build -t "mzajac/wildfly:9.0.1" .
