@@ -25,4 +25,4 @@ RUN             chmod 755 /etc/service/wildfly/run
 #VOLUME          /data/deployments
 #CMD             /opt/wildfly-8.2.0.Final/bin/standalone.sh -b 0.0.0.0 -bmanagement=0.0.0.0 --server-config=standalone-full.xml
 
-EXPOSE          8080 9990
+EXPOSE          8080 9990 5445
